@@ -17,6 +17,36 @@ A minimalist, framework-free digital menu booklet with flipping animation and bi
 - ⚡ Fast loading with minimal dependencies
 
 
+
+## 📁 Project Structure – Restaurant Website
+
+restaurant-website/ <br>
+├── index.html                 # Landing page  
+├── menu.html                  # Menu booklet page  
+├── css/  
+│   ├── style.css              # Common styles  
+│   ├── landing.css            # Landing page-specific styles  
+│   └── menu.css               # Menu-specific styles  
+├── js/  
+│   ├── main.js                # Common JavaScript functionality  
+│   ├── menu-flipper.js        # Logic for flipping menu pages  
+│   └── language-switcher.js   # Toggle between languages  
+├── assets/  
+│   ├── images/  
+│   │   ├── restaurant/        # Photos of the restaurant  
+│   │   └── menu/              # Menu item photos  
+│   ├── icons/                 # Icons (e.g., nav arrows)  
+│   └── fonts/                 # Custom fonts  
+└── locales/  
+    ├── en/                    # English content  
+    │   ├── landing.json  
+    │   └── menu.json  
+    └── jp/                    # Japanese content  
+        ├── landing.json  
+        └── menu.json  
+
+
+
 ## Key Sections Included:
 
 1. **Project Overview**: Brief description with visual demo placeholder
