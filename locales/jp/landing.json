@@ -1,0 +1,18 @@
+{
+  "restaurantName": "レストラン名",
+  "tagline": "伝統的な料理に現代的なひねりを",
+  "menuTitle": "メニュー",
+  "appetizers": "前菜",
+  "mains": "メイン料理",
+  "sushi": "寿司セレクション",
+  "desserts": "デザート",
+  "drinks": "ドリンク",
+  "viewFullMenu": "フルメニューを見る",
+  "hoursTitle": "営業時間",
+  "hours": "月曜日〜金曜日: 午前11時〜午後10時\n週末: 午前10時〜午後11時",
+  "locationTitle": "場所",
+  "location": "東京都\n桜通り123",
+  "contactTitle": "お問い合わせ",
+  "contact": "電話: (123) 456-7890\nメール: info@restaurant.com",
+  "copyright": "© 2025 レストラン名. All rights reserved."
+}

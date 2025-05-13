@@ -1,0 +1,18 @@
+{
+  "menuTitle": "Our Menu",
+  "menuSubtitle": "Authentic flavors, crafted with care",
+  "appetizers": "Appetizers",
+  "mains": "Main Dishes",
+  "sushi": "Sushi Selection",
+  "desserts": "Desserts",
+  "drinks": "Drinks",
+  "misoSoup": "Miso Soup",
+  "misoSoupDesc": "Traditional soup with tofu, seaweed, and green onions",
+  "edamame": "Edamame",
+  "edamameDesc": "Young soybeans lightly salted",
+  "chickenTeriyaki": "Chicken Teriyaki",
+  "chickenTeriyakiDesc": "Grilled chicken with homemade teriyaki sauce",
+  "tempura": "Tempura",
+  "tempuraDesc": "Crispy battered shrimp and seasonal vegetables",
+  "copyright": "© 2025 Restaurant Name. All rights reserved."
+}

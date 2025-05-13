@@ -1,0 +1,324 @@
+/* Menu book specific styling */
+.menu-container {
+  position: relative;
+  max-width: 1000px;
+  height: calc(100vh - 200px);
+  min-height: 600px;
+  margin: 2rem auto;
+  perspective: 1200px;
+}
+
+/* Navigation arrows */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-arrow:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.left-arrow {
+  left: -30px;
+}
+
+.right-arrow {
+  right: -30px;
+}
+
+.nav-arrow img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Menu book */
+.menu-book {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* Menu pages */
+.menu-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--menu-page-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  backface-visibility: hidden;
+  transform-origin: center center;
+  overflow: hidden;
+  display: none;
+}
+
+.menu-page.active {
+  display: block;
+  z-index: 5;
+}
+
+/* Page content */
+.page-content {
+  padding: 3rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Cover page styling */
+.cover-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f5f5, #fff);
+}
+
+.cover-content h1 {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.menu-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.cover-content p {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+/* Menu section styling */
+.menu-page h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.menu-page h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+/* Menu items */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.item-details {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-details h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #666;
+  flex-grow: 1;
+}
+
+/* Page indicators */
+.page-indicators {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.page-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.page-dot.active {
+  background-color: var(--primary-color);
+}
+
+/* Page flipping animations */
+.menu-page.flipping-out {
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  display: block;
+  z-index: 10;
+}
+
+.menu-page.flipping-in {
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  display: block;
+  z-index: 5;
+}
+
+.menu-page.flipping-out.next {
+  animation-name: flipOutLeft;
+}
+
+.menu-page.flipping-in.next {
+  animation-name: flipInRight;
+}
+
+.menu-page.flipping-out.previous {
+  animation-name: flipOutRight;
+}
+
+.menu-page.flipping-in.previous {
+  animation-name: flipInLeft;
+}
+
+@keyframes flipOutLeft {
+  from { transform: rotateY(0); opacity: 1; }
+  to { transform: rotateY(-90deg); opacity: 0; }
+}
+
+@keyframes flipInRight {
+  from { transform: rotateY(90deg); opacity: 0; }
+  to { transform: rotateY(0); opacity: 1; }
+}
+
+@keyframes flipOutRight {
+  from { transform: rotateY(0); opacity: 1; }
+  to { transform: rotateY(90deg); opacity: 0; }
+}
+
+@keyframes flipInLeft {
+  from { transform: rotateY(-90deg); opacity: 0; }
+  to { transform: rotateY(0); opacity: 1; }
+}
+
+/* Menu footer styling */
+.menu-footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-container {
+    height: calc(100vh - 150px);
+    margin: 1rem auto;
+  }
+  
+  .page-content {
+    padding: 2rem;
+  }
+  
+  .cover-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .menu-items {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-arrow {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .left-arrow {
+    left: -20px;
+  }
+  
+  .right-arrow {
+    right: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-container {
+    height: calc(100vh - 120px);
+  }
+  
+  .page-content {
+    padding: 1.5rem;
+  }
+  
+  .cover-content h1 {
+    font-size: 2rem;
+  }
+  
+  .menu-logo {
+    width: 150px;
+  }
+  
+  .menu-page h2 {
+    font-size: 2rem;
+  }
+  
+  .item-details h3 {
+    font-size: 1.1rem;
+  }
+  
+  .nav-arrow {
+    width: 40px;
+    height: 40px;
+  }
+}

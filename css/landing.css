@@ -1,0 +1,172 @@
+/* Landing page specific styling */
+.landing {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+}
+
+.restaurant-name {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* Menu navigation section */
+.menu-navigation {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.menu-navigation h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.menu-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  padding: 1.5rem 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.menu-button span {
+  font-weight: 600;
+}
+
+.full-menu-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.full-menu-button:hover {
+  background-color: #b82518;
+}
+
+/* Restaurant info section */
+.restaurant-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.info-block {
+  flex: 1;
+  min-width: 250px;
+}
+
+.info-block h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hero {
+    height: 40vh;
+    min-height: 300px;
+  }
+  
+  .restaurant-name {
+    font-size: 2rem;
+  }
+  
+  .menu-button {
+    width: 130px;
+  }
+  
+  .info-block {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .restaurant-name {
+    font-size: 1.8rem;
+  }
+  
+  .menu-buttons {
+    gap: 1rem;
+  }
+  
+  .menu-button {
+    width: 110px;
+    padding: 1rem 0.5rem;
+  }
+  
+  .menu-button img {
+    width: 48px;
+    height: 48px;
+  }
+}

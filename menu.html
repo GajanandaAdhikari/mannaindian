@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/menu-flipper.js" defer></script>
+    <script src="js/language-switcher.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">Restaurant Name</a></div>
+        <nav>
+            <div class="language-switcher">
+                <button id="en-toggle" class="active">EN</button>
+                <button id="jp-toggle">JP</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="menu-container">
+        <!-- Navigation arrows -->
+        <div class="nav-arrow left-arrow" id="prev-page">
+            <img src="assets/icons/arrow-left.svg" alt="Previous page">
+        </div>
+        <div class="nav-arrow right-arrow" id="next-page">
+            <img src="assets/icons/arrow-right.svg" alt="Next page">
+        </div>
+
+        <!-- Menu book -->
+        <div class="menu-book" id="menu-book">
+            <!-- Cover page -->
+            <div class="menu-page active" id="cover">
+                <div class="page-content cover-content">
+                    <h1 data-lang-key="menuTitle">Our Menu</h1>
+                    <img src="assets/images/restaurant/logo.png" alt="Restaurant logo" class="menu-logo">
+                    <p data-lang-key="menuSubtitle">Authentic flavors, crafted with care</p>
+                </div>
+            </div>
+
+            <!-- Appetizers section -->
+            <div class="menu-page" id="appetizers">
+                <div class="page-content">
+                    <h2 data-lang-key="appetizers">Appetizers</h2>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="assets/images/menu/miso-soup.jpg" alt="Miso Soup">
+                            <div class="item-details">
+                                <h3 data-lang-key="misoSoup">Miso Soup</h3>
+                                <p class="price">¥450</p>
+                                <p class="description" data-lang-key="misoSoupDesc">Traditional soup with tofu, seaweed, and green onions</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/images/menu/edamame.jpg" alt="Edamame">
+                            <div class="item-details">
+                                <h3 data-lang-key="edamame">Edamame</h3>
+                                <p class="price">¥400</p>
+                                <p class="description" data-lang-key="edamameDesc">Young soybeans lightly salted</p>
+                            </div>
+                        </div>
+                        <!-- More appetizers would go here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Dishes section -->
+            <div class="menu-page" id="mains">
+                <div class="page-content">
+                    <h2 data-lang-key="mains">Main Dishes</h2>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="assets/images/menu/teriyaki.jpg" alt="Chicken Teriyaki">
+                            <div class="item-details">
+                                <h3 data-lang-key="chickenTeriyaki">Chicken Teriyaki</h3>
+                                <p class="price">¥1,800</p>
+                                <p class="description" data-lang-key="chickenTeriyakiDesc">Grilled chicken with homemade teriyaki sauce</p>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <img src="assets/images/menu/tempura.jpg" alt="Tempura">
+                            <div class="item-details">
+                                <h3 data-lang-key="tempura">Tempura</h3>
+                                <p class="price">¥1,600</p>
+                                <p class="description" data-lang-key="tempuraDesc">Crispy battered shrimp and seasonal vegetables</p>
+                            </div>
+                        </div>
+                        <!-- More main dishes would go here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more menu pages as needed for sushi, desserts, drinks -->
+            <!-- This is just an example structure -->
+
+        </div>
+
+        <!-- Page indicators -->
+        <div class="page-indicators" id="page-indicators">
+            <!-- Will be populated by JS -->
+        </div>
+    </div>
+
+    <footer class="menu-footer">
+        <p data-lang-key="copyright">© 2025 Restaurant Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

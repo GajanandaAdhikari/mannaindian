@@ -1,0 +1,18 @@
+{
+  "restaurantName": "Restaurant Name",
+  "tagline": "Traditional cuisine with a modern twist",
+  "menuTitle": "Our Menu",
+  "appetizers": "Appetizers",
+  "mains": "Main Dishes",
+  "sushi": "Sushi Selection",
+  "desserts": "Desserts",
+  "drinks": "Drinks",
+  "viewFullMenu": "View Full Menu",
+  "hoursTitle": "Hours",
+  "hours": "Monday-Friday: 11am-10pm\nWeekends: 10am-11pm",
+  "locationTitle": "Location",
+  "location": "123 Sakura Street\nTokyo, Japan",
+  "contactTitle": "Contact",
+  "contact": "Phone: (123) 456-7890\nEmail: info@restaurant.com",
+  "copyright": "© 2025 Restaurant Name. All rights reserved."
+}

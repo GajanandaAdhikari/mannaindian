@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Name</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/language-switcher.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Restaurant Name</div>
+        <nav>
+            <div class="language-switcher">
+                <button id="en-toggle" class="active">EN</button>
+                <button id="jp-toggle">JP</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="landing">
+        <div class="hero">
+            <img src="assets/images/restaurant/hero.jpg" alt="Restaurant interior" class="hero-image">
+            <div class="hero-content">
+                <h1 class="restaurant-name" data-lang-key="restaurantName">Restaurant Name</h1>
+                <p class="tagline" data-lang-key="tagline">Traditional cuisine with a modern twist</p>
+            </div>
+        </div>
+
+        <section class="menu-navigation">
+            <h2 data-lang-key="menuTitle">Our Menu</h2>
+            <div class="menu-buttons">
+                <a href="menu.html#appetizers" class="menu-button" data-section="appetizers">
+                    <img src="assets/icons/appetizer.svg" alt="Appetizers icon">
+                    <span data-lang-key="appetizers">Appetizers</span>
+                </a>
+                <a href="menu.html#mains" class="menu-button" data-section="mains">
+                    <img src="assets/icons/main.svg" alt="Main dishes icon">
+                    <span data-lang-key="mains">Main Dishes</span>
+                </a>
+                <a href="menu.html#sushi" class="menu-button" data-section="sushi">
+                    <img src="assets/icons/sushi.svg" alt="Sushi icon">
+                    <span data-lang-key="sushi">Sushi Selection</span>
+                </a>
+                <a href="menu.html#desserts" class="menu-button" data-section="desserts">
+                    <img src="assets/icons/dessert.svg" alt="Desserts icon">
+                    <span data-lang-key="desserts">Desserts</span>
+                </a>
+                <a href="menu.html#drinks" class="menu-button" data-section="drinks">
+                    <img src="assets/icons/drink.svg" alt="Drinks icon">
+                    <span data-lang-key="drinks">Drinks</span>
+                </a>
+            </div>
+            <div class="view-full-menu">
+                <a href="menu.html" class="full-menu-button" data-lang-key="viewFullMenu">View Full Menu</a>
+            </div>
+        </section>
+
+        <section class="restaurant-info">
+            <div class="info-block">
+                <h3 data-lang-key="hoursTitle">Hours</h3>
+                <p data-lang-key="hours">Monday-Friday: 11am-10pm<br>Weekends: 10am-11pm</p>
+            </div>
+            <div class="info-block">
+                <h3 data-lang-key="locationTitle">Location</h3>
+                <p data-lang-key="location">123 Sakura Street<br>Tokyo, Japan</p>
+            </div>
+            <div class="info-block">
+                <h3 data-lang-key="contactTitle">Contact</h3>
+                <p data-lang-key="contact">Phone: (123) 456-7890<br>Email: info@restaurant.com</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-lang-key="copyright">© 2025 Restaurant Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
