@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap");
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.header {
+    margin-bottom: 2em;
+    background: linear-gradient(to bottom, #d8511d, #fcd659);
+    padding: 0em 2em;
+    color: black;
+    text-align: left;
+}
+
+.header .menu-title {
+    font-family: "Marck Script", cursive;
+    padding-top: 0.2em;
+    font-size: 9rem;
+    line-height: 0.7;
+    font-weight: 700;
+    color: #d400;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.2rem white;
+    text-shadow: 0 0 5px red;
+    margin-bottom: 0em;
+}
+
+.header p {
+    margin: 0.1em 0;
+}
+
+.divider {
+    height: 0.1rem;
+    width: 100%;
+    background: linear-gradient(to right, #d8511d, #fcd659);
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+}
+
+.menu-section {
+    margin-bottom: 2em;
+    padding: 0 1em;
+}
+
+.menu-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.75em;
+    color: #333;
+}
+
+.header .japanese-subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75em;
+    color: #333;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+}
+
+.menu-item-name {
+    flex: 1 1 60%;
+    font-weight: 500;
+}
+
+.menu-item-price {
+    font-size: 1.5rem;
+    flex: 1 1 30%;
+    text-align: right;
+    font-weight: 500;
+}
+
+.image-placeholder .japanese-name , .image-placeholder .english-name {
+    color: #454545;
+}
+
+.menu-item-desc {
+    flex-basis: 100%;
+    margin-left: 1em;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.3em;
+}
+
+.special {
+    color: #d00;
+}
+
+.photo-note {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 0.9rem;
+}
+
+.english-name {
+    font-size: 1.5rem;
+    color: black;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    margin-left: 0.5em;
+}
+
+.japanese-name {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 500;
+    margin-left: 0.5em;
+}
+
+.image-cell img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.image-cell {
+    width: 14rem;
+}
+
+.section-description {
+    font-size: 0.9rem;
+    margin-bottom: 1em;
+}
+
+.hashtag {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+}
+
+/* 🔄 Responsive tweaks for smaller screens */
+@media (max-width: 600px) {
+    .image-cell img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .image-cell {
+        width: 8rem;
+    }
+
+    .header .menu-title {
+        font-size: 2.2rem;
+        -webkit-text-stroke: 1.5px white;
+    }
+
+    .menu-title {
+        font-size: 1rem;
+    }
+
+    .menu-item-name,
+    .menu-item-price {
+        flex: 1 1 100%;
+        text-align: left;
+    }
+
+    .menu-item-price {
+        font-size: 1.5rem;
+        text-align: left;
+        margin-top: 0.3em;
+    }
+
+    .header .japanese-subtitle {
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 0.75em;
+        color: #333;
+    }
+
+    .header .menu-title {
+        font-family: "Marck Script", cursive;
+        padding-top: 0.2em;
+        font-size: 4rem;
+        line-height: 0.7;
+        font-weight: 700;
+        color: #d400;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 0.1rem white;
+        text-shadow: 0 0 5px red;
+        margin-bottom: 0em;
+    }
+
+    .menu-item-desc {
+        margin-left: 0;
+    }
+
+    body {
+        padding: 0.5em;
+        font-size: 0.95rem;
+    }
+}
+
+/* 🌐 Language toggle styles */
+.language-toggle {
+    display: none;
+    margin: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .language-toggle {
+        display: block;
+    }
+
+    .japanese-name,
+    .english-name {
+        font-size: 0.75rem;
+        display: none;
+    }
+
+    .menu-item-price {
+        font-size: 0.7rem;
+    }
+
+    .show-japanese .japanese-name {
+        display: inline;
+    }
+
+    .show-english .english-name {
+        display: inline;
+    }
+}
+
+@media (min-width: 769px) {
+    .japanese-name,
+    .english-name {
+        display: inline;
+    }
+}
