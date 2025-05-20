@@ -177,6 +177,49 @@ body {
     width: 100%;
 }
 
+.page {
+  width: 100%;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.7s ease;
+  transform-origin: left center;
+}
+
+.page.flip-next {
+  transform: rotateY(-180deg);
+}
+
+.page.flip-prev {
+  transform: rotateY(180deg);
+}
+
+/* Arrows */
+.nav-button {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 1000;
+  user-select: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+#prevBtn {
+  left: 10px;
+}
+#nextBtn {
+  right: 10px;
+}
+
 /* 🔄 Responsive tweaks for smaller screens */
 @media (max-width: 600px) {
     .image-cell img {
